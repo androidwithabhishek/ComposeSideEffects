@@ -7,6 +7,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.time.Duration.Companion.milliseconds
+
 //👉 Get a scope tied to the composable lifecycle for launching coroutines from events.
 @Composable
 fun RememberCoroutineScopeExample() {
@@ -16,6 +18,7 @@ fun RememberCoroutineScopeExample() {
         scope.launch (context = Dispatchers.IO){
 
             println("Button clicked, coroutine launched")
+
         }
     }) {
 
